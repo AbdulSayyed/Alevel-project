@@ -21,7 +21,7 @@ Date:   Wed Feb 14 14:13:53 2024 +0000
 
     Initial Commit: Readme.md added for A level project
 ```
-    > First commit is done.
+> First commit is done.
 
 ### Step 2:
 
@@ -70,10 +70,11 @@ K:.
             success.wav
 ```
   
-    > Second commit is done
+> Second commit is done
 
-- There were some mistakes found in Readme.Md file so another additional commit is being done.
+- There were some mistakes found in Readme.Md file so another additional two commit is being done.
 
+    
 ---
 
 
