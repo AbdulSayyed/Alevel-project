@@ -1,0 +1,13 @@
+{
+  "opposites": {
+    "Q-1": {
+      "words": ["local", "sand", "small", "foreign", "real","home"],
+      "answer": ["local", "foreign"]
+    },
+    "Q-2": {
+      "words":  ["matter", "water", "air", "floor", "sky","manner"],
+      "answer": ["floor", "sky"]
+    }
+  }
+}
+  
