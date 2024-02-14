@@ -14,7 +14,7 @@
 - Once this is added, it is first staged using `git add -A .` it staged all files present in current folder.
 - When log is taken of the commit it shows the following.
   
-```
+```txt
 commit 14bf41b805feb441ed62d52a3cfaca8258996393 (HEAD -> main)
 Author: SulaimanSayyed <Sullisayyed21@outlook.com>
 Date:   Wed Feb 14 14:13:53 2024 +0000
@@ -44,9 +44,9 @@ K:.
 - Data folder has a JSON file named `opposites.json` It contains only two questions. Thy are kept in JSON objects and values are kept in an array using bracket notations `[]`.
 - Two sounds are used to denote the success or failure, they are kept in sounds folder.
 - Following is the state of this project folder, `tree /F` command is used to get using microsoft terminal with `powershell 7.4.0`.
-  
-  ```
-  K:.
+
+```
+K:.
 │   ReadMe.md
 │
 └───resources
@@ -69,5 +69,12 @@ K:.
             buzz.wav
             success.wav
 ```
+  
+    > Second commit is done
+
+- There were some mistakes found in Readme.Md file so another additional commit is being done.
+
+---
+
 
 ### Step 3:
