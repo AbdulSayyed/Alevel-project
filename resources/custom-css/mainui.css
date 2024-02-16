@@ -1,0 +1,19 @@
+.div-ui-custom{
+    text-align: center;
+}
+.container {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.button-container {
+    padding: 2px;
+}
+.btn {
+    height:50px;
+    background-color: darkolivegreen;
+}
+.button-container .btn {
+    width: 100%;
+    margin-bottom: 10px;
+}

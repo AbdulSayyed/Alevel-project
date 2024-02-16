@@ -173,8 +173,38 @@ header {
 }
 ```
 
-> Fifth commit is done ( the third and fourth were only done to correct some mistakes)
+> Fifth commit is done ( the third and fourth were only done to correct some typo)
 
 
+---
+
+## Adding second page
 
 
+### Step 4
+
+- A new file `mainui.html` is added, it presents available practices to the user.
+- User interface is divided into two bootstrap columns which are kept in one row as shown in the html code.
+- Button elements are used to display the choices.
+- A new file `mainui.css` is created to control the styles. Though it could have been written in the same style.css, but to keep everything separate and easy to understand a new file is used.
+- To implement the logic of navigating to this page when button is pressed from the index.html, code is written in `script-1.js`.
+- When the button with id `start-btn` is clicked it navigates to the mainui.html consequently the next page is shown. This logic is shown below.
+  
+```js 
+// Get the reference to the  button element
+const startButton = document.getElementById('start-btn');
+
+// Attach an event listener to the button
+startButton.addEventListener('click', function() {
+    // Redirect to the next page
+    document.location.href = 'mainui.html';
+});
+```
+
+- **Code Analysis**
+- Though JavaScript is not an object oriented language by design yet it provides concepts to create objects and access its properties and methods using dot `.` notation which is common in most object oriented language like C++.
+- JavaScript has the ability to access the DOM ( document object model) which is available to modern browser like chrome,to access html elements along with its fields. The `document` object in above code points to the html file loaded.
+- When a method is to be selected by its object or an instance of the class, it is done by using a dot notation. Thus to do any work with html tags or elements, it first needs to be referenced, it is often knows as having a handel to the object. And to do so `getElementById()` method of the `document` object  is used. The method `getElementById()` takes an argument which is provided with an unique id `start-btn` that belong to a button that controls the navigation to the other page.
+- Once its reference is acquired, it is saved in a variable identifier named `startButton` of type `const`.
+- The reason it is done so that an event listener can be attached to this button. Once the event listener is attached, we can write the logic for this button to take action.
+-  The logic  is to assign a value to `href` which points to a file name `mainui.html` using the `document` object then selecting its property `location`. Though location is a property of the `document` object but itself is an object which is present in `document` object as a property. In turn `location` property `href` is used to assign a value.
