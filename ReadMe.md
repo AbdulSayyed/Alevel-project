@@ -208,3 +208,19 @@ startButton.addEventListener('click', function() {
 - Once its reference is acquired, it is saved in a variable identifier named `startButton` of type `const`.
 - The reason it is done so that an event listener can be attached to this button. Once the event listener is attached, we can write the logic for this button to take action.
 -  The logic  is to assign a value to `href` which points to a file name `mainui.html` using the `document` object then selecting its property `location`. Though location is a property of the `document` object but itself is an object which is present in `document` object as a property. In turn `location` property `href` is used to assign a value.
+
+> Sixth commit is done. The state of the git commit is shown in concise log format below
+
+```
+
+
+```txt
+c3231ae (HEAD -> main) Sixth-commit: New files mainui.html,mainui.css along with scritp code to navigate is added, everything working.
+35d12ac Fifth-commit: index.html, styles.css and main-page.png added. The site is working
+8484e35  Second Commit-redone is corrected: ReadMe.md corrected
+8ffafc4 Second commit-redone: ReadMe.md file corrected
+540e6a9 second commit: folder structure added along with empty files. Only opposite.json contains the data so are the sound files. bootstrap min.js and min.css is added.
+14bf41b Initial Commit: Readme.md added for A level project
+---
+
+### Step 5:

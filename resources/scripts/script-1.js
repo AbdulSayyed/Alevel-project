@@ -1,3 +1,4 @@
+// The code below navigates from landing page to mainui.html
 // Get the reference to the  button element
 const startButton = document.getElementById('start-btn');
 
@@ -7,3 +8,5 @@ startButton.addEventListener('click', function() {
     document.location.href = 'mainui.html';
     
 });
+
+
