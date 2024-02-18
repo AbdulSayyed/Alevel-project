@@ -1,10 +1,10 @@
 {
   "opposites": {
-    "Question-1": {
+    "Question1": {
       "words": ["local", "sand", "small", "foreign", "real","home"],
       "answer": ["local", "foreign"]
     },
-    "Question-2": {
+    "Question2": {
       "words":  ["matter", "water", "air", "floor", "sky","manner"],
       "answer": ["floor", "sky"]
     }

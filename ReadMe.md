@@ -178,10 +178,10 @@ header {
 
 ---
 
-## Adding second page
+ 
 
 
-### Step 4
+### Step 4: Adding second page
 
 - A new file `mainui.html` is added, it presents available practices to the user.
 - User interface is divided into two bootstrap columns which are kept in one row as shown in the html code.
@@ -213,7 +213,6 @@ startButton.addEventListener('click', function() {
 
 ```
 
-
 ```txt
 c3231ae (HEAD -> main) Sixth-commit: New files mainui.html,mainui.css along with scritp code to navigate is added, everything working.
 35d12ac Fifth-commit: index.html, styles.css and main-page.png added. The site is working
@@ -223,4 +222,64 @@ c3231ae (HEAD -> main) Sixth-commit: New files mainui.html,mainui.css along with
 14bf41b Initial Commit: Readme.md added for A level project
 ---
 
-### Step 5:
+```
+---
+
+### Step 5: Adding third page
+
+- A new file `test.html` is created along with its corresponding `test.css` and script named `script-3.js` that holds the logic.
+- It contains Bootstrap accordion which is used as a place-holders to populate the values from data which is present in JSON format in `opposite.json` file.
+- When this page is loaded a function `populateQuestions()` is invoked which fetches the data from the json file. The code is shown below.
+  
+```js
+// Function to fetch and populate questions from opposites.json file
+function populateQuestions() {
+    // Fetch data from opposites.json
+    fetch('./resources/data/opposites.json')
+        .then(response => response.json())
+        .then(data => {
+            // Access the opposites object from the JSON data
+            const opposites = data.opposites;
+            console.log(opposites);
+
+            // Loop through each question in the opposites object
+            for (const key in opposites) {
+                console.log(key);
+                // Access the accordion button for the current question
+                const questionButton = document.getElementById(key);
+
+                // Populate the text content of the button with the current question name
+                questionButton.textContent = key;
+
+                // Access the words array for the current question
+                const words = opposites[key].words;
+
+                // Loop through each word in the words array
+                for (let i = 0; i < words.length; i++) {
+                    // Construct the ID of the checkbox for the current option
+                    const checkboxId = key + `-option${i+1}`;
+                    console.log(checkboxId);
+
+                    // Access the checkbox for the current option
+                    const checkbox = document.getElementById(checkboxId);
+
+                    // Populate the label text for the current option
+                    checkbox.nextElementSibling.textContent = words[i];
+                    const getValue = checkbox.nextElementSibling.textContent.trim();
+                    console.log(getValue);
+                }
+            }
+            console.log("Finished populating the question");
+        })
+        .catch(error => console.error('Error fetching data:', error));
+}
+```
+
+> Seventh-commit is done.
+
+---
+
+
+
+
+

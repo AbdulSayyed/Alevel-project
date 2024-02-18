@@ -37,3 +37,12 @@
     margin-bottom: 10px;
     text-align: center;
 }
+
+/* Style for checkbox labels */
+.list-group-item label {
+    margin-bottom: 0; /* Remove default margin */
+    margin-left: 40%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: x-large;
+    
+}
