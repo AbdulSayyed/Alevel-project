@@ -8,3 +8,4 @@ oppositeButton.addEventListener('click', function() {
     // Redirect to the test.html page
     window.location.href = 'test.html';
 });
+

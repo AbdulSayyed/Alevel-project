@@ -27,3 +27,11 @@ header {
     text-align: center;
     margin-top: 100px;
 }
+
+.anchor{
+    font-size: 18px;
+     color: blue; 
+     background-color: white;
+      padding: 5px 10px;
+       border-radius: 5px;
+}

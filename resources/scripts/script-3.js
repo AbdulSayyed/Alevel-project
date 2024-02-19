@@ -70,9 +70,6 @@ function checkAnswer(questionId) {
         }
     });
 
-    // construct the accordion item id 
-
-
     
     // check the answer for selected question
     fetch('./resources/data/opposites.json')
@@ -80,10 +77,9 @@ function checkAnswer(questionId) {
         .then(data => {
             // Access the opposites object from the JSON data
             const opposites = data.opposites;
-            // Get the correct answer pairs from the JSON file
+            // Get the correct answer pair from the JSON file
             console.log("Chekcing for answer to be correct");
             for ( const key in opposites) {
-                //console.log(key + ` the qustion id is `+ questionId);
                 // Access the answer array for the current question
                  if (key === questionId) {
                  console.log(" it is right question being checked:" + key);
@@ -124,9 +120,6 @@ function checkAnswer(questionId) {
             selectedLabels = [];
             correctAnswer = [];
 
-            // Optionally, display a tick mark icon next to the answer
-            // (You can implement this part using Font Awesome or any other icon library)
-
         } else {
             // Play failure sound
             var failureSound = new Audio("./resources/sounds/buzz.wav");
@@ -148,7 +141,7 @@ function checkAnswer(questionId) {
     .catch(error => console.error('Error fetching data:', error));
 }
 
-
+// Compare both arrays of answers
 function compareArrays(correctAnswers,selectedLabels) {
     if ( correctAnswers.length !== selectedLabels.length){
         return false;
@@ -165,7 +158,7 @@ function compareArrays(correctAnswers,selectedLabels) {
     return true;
 }
 
-// Function to handle accordion collapse
+// Function to handle accordion collapse and clear checkboxes
 function handleAccordionCollapse(event) {
     // Get the accordion item that triggered the event
     console.log("accordion collapsed!");
@@ -176,6 +169,7 @@ function handleAccordionCollapse(event) {
     checkboxes.forEach(checkbox => {
         checkbox.checked = false;
     });
+    console.log("Check boxes are cleared!")
 }
 
 // Add event listener for accordion collapse to all accordion items
@@ -183,6 +177,7 @@ document.querySelectorAll('.accordion-item').forEach(item => {
     item.addEventListener('hidden.bs.collapse', handleAccordionCollapse);
 });
 
+// invoke this function when page is loaded to populate the accordion from JSON file.
 window.onload = function() {
     populateQuestions();
 };
