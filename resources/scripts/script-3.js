@@ -19,7 +19,7 @@ function populateQuestions() {
 
                 // Access the words array for the current question
                 const words = opposites[key].words;
-
+                console.log(words);
                 // Loop through each word in the words array
                 for (let i = 0; i < words.length; i++) {
                     // Construct the ID of the checkbox for the current option
@@ -40,7 +40,7 @@ function populateQuestions() {
         .catch(error => console.error('Error fetching data:', error));
 }
 
-// Hold the correct answer pair
+// Using some global variables to hold different values
 var correctAnswer = [];
 var accordionItemId;
 var checkedBoxes;
@@ -89,7 +89,7 @@ function checkAnswer(questionId) {
                     for ( let i=0 ; i < temp.length; i++ ){
                         correctAnswer.push(temp[i]);
                     }
-                    console.log(correctAnswer);
+                    console.log("correct answer pair is " + correctAnswer + "  from JSON file");
                     break; // no need to go to the next question
                  }
             }
@@ -114,7 +114,7 @@ function checkAnswer(questionId) {
             successSound.play();
             setTimeout(function() {
                 answerButton.classList.remove("btn-success");
-            }, 2000);
+            }, 3000);
 
             // Reset selected array
             selectedLabels = [];
@@ -131,7 +131,7 @@ function checkAnswer(questionId) {
             // Revert the color back to its original color after 2 seconds
             setTimeout(function() {
                 answerButton.classList.remove("btn-danger");
-            }, 2000);
+            }, 3000);
             // Set the arrays to be empty
             selectedLabels = [];
             correctAnswer = [];
